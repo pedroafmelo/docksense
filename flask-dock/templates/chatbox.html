@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DockSense</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='chatbot-style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Sora" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="chat-container">
+        <div class="chat" id="chat">
+            <h1 style="align-items: center;">DockSense</h1>
+            {% for message in chat_history %}
+            <div class="message {% if message[1]%}pergunta{% else %}resposta{% endif %}">{{ message[0] }}</div>
+            {% endfor %}
+        </div>
+        <div class="input-container">
+            <form action="/chatbot/" method="post">
+                <input type="text" name="message" placeholder="Digite uma mensagem..." required>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

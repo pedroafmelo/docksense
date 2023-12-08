@@ -1,0 +1,122 @@
+body {
+    font-family: 'Roboto Mono';
+    background-image: url('energia.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    color: white;
+    font-size: 24px;
+    font-family: 'Sora', sans-serif;
+    /* Usando a fonte 'Sora' do Google Fonts */
+
+}
+
+.card {
+    width: 800px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.card h1 {
+    align-self: flex-start;
+}
+
+
+.chat {
+    max-height: 300px;
+    max-width: 450px;
+    padding: 10px;
+    border-bottom: 1px solid #000000;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: rgba(238, 255, 136, 0.7);
+    color: black;
+    max-width: 100%;
+    /* Largura máxima das mensagens */
+    overflow-wrap: break-word;
+    animation: blink 1s infinite;
+}
+
+.pergunta {
+    background-color: rgba(255, 255, 255);
+    /* rgba(238, 255, 136, 0.7);*/
+    /* Cor para perguntas */
+    color: black;
+    align-self: flex-start;
+    /* Alinhar à esquerda */
+}
+
+.resposta {
+    background-color: rgb(215, 211, 211);
+    /* #86BB71;*/
+    /* Cor para respostas */
+    color: black;
+    align-self: flex-end;
+    /* Alinhar à direita */
+}
+
+.input-container {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #FFFFFF;
+}
+
+button {
+    background-color: #00D8D8;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Largura da barra de rolagem vertical */
+}
+
+/* Estilizando o polegar da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background-color: rgba(111, 122, 121, 0.7);
+    ;
+    /* Cor do polegar da barra de rolagem */
+    border-radius: 6px;
+    /* Borda arredondada do polegar */
+}
+
+/* Estilizando a barra de rolagem quando hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(111, 122, 121, 0.7);
+    /* Cor do polegar quando o mouse está sobre a barra de rolagem */
+}
